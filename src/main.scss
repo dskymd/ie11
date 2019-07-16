@@ -1,0 +1,88 @@
+@import 'vars.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  width: 100%;
+  margin: auto;
+  background: #f0f0f0;
+}
+
+.header {
+  margin: $gutter * 2 0;
+  .container {
+    padding: $gutter;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 50%;
+  padding: $gutter;
+
+  .cell {
+    padding: $gutter;
+    background: #F90;
+  }
+}
+
+
+
+@media (min-width: $screen__s) {
+  .item {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: $screen__m) {
+
+  .container {
+    width: $screen__m;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  .item {
+    width: 25%;
+  }
+}
+
+
+@media (min-width: $screen__l) {
+
+  .container {
+    width: $screen__l;
+  }
+
+  item {
+    width: 20%;
+  }
+}
+
+
+@media (min-width: $screen__xl) {
+
+  .container {
+    width: $screen__xl;
+  }
+
+  item {
+    width: 16.666%;
+  }
+}
